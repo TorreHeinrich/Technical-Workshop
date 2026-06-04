@@ -85,7 +85,7 @@ export default function App() {
               className="flex items-center gap-1.5 py-1.5 px-3 border border-fluid-gold text-fluid-gold hover:bg-fluid-gold/10 font-mono text-[10px] tracking-wider font-extrabold uppercase transition-all cursor-pointer select-none"
             >
               <HelpCircle className="w-3.5 h-3.5" />
-              <span>Anleitung</span>
+              <span>Guide</span>
             </button>
             <div className="text-right font-mono">
               <div className="text-[9px] text-fluid-gold uppercase tracking-widest font-bold text-class">Station ID</div>

@@ -35,50 +35,50 @@ interface TourStep {
 const TOUR_STEPS: TourStep[] = [
   {
     tab: "intro",
-    title: "Moin & Willkommen im Engineering-Workspace!",
-    description: "Hier befinden Sie sich im Übersichts-Cockpit des High-End-Radrennsports von Torre Ehlers. Diese Plattform demonstriert zukunftsweisende hydraulische Fluidrechnung, Tribologie-Wissenschaft und thermodynamische Belastungsmuster für Championat-Setups.",
-    hotspots: ["Überblick & Einführungstexte", "Ingenieursphilosophie"],
-    tips: "Tipp: Scrollen Sie nach unten, um die detaillierten Einführungstabellen zu studieren.",
+    title: "Welcome to the Engineering Workspace!",
+    description: "You are currently in the central overview cockpit of high-end cycling engineering by Torre Ehlers. This platform explores progressive hydraulic calculations, tribological science, and thermo-mechanical stress cycles engineered for professional championship setups.",
+    hotspots: ["Overview & Introductions", "Engineering Philosophy"],
+    tips: "Tip: Scroll down on this tab to review and study the detailed comparative tables.",
     badge: "01 / WORKSPACE CONFIG"
   },
   {
     tab: "areas",
-    title: "Technisches Knowhow & Kernkompetenzen",
-    description: "In diesem Modul finden Sie fundierte Lösungswege für reale Werkstattherausforderungen. Entdecken Sie Systemarchitekturen, Dichtungstechnik unter Extremkonditionen sowie die korrekte D-Gap-Bremszylinder-Ausrichtung.",
-    hotspots: ["Core Technical Competencies", "Echte Werkstatt-Fallstricke (Pitfalls)", "Pro-Tips für Schrauber"],
-    tips: "Tipp: Klicken Sie auf eine der Kompetenzkarten, um tiefergehende Problemlösungen aufzuklappen.",
+    title: "Precision Engineering & Core Competencies",
+    description: "In this module, you will find targeted solutions to real-world workshop challenges. Interrogate advanced hydraulic architectures, specialized sealing metrics under heavy loads, and proper caliper D-Gap alignment.",
+    hotspots: ["Core Technical Competencies", "Real Workshop Pitfalls", "Pro Tips"],
+    tips: "Tip: Click on any of the competency cards to expand step-by-step diagnostic workflows.",
     badge: "02 / CORE SKILLS"
   },
   {
     tab: "tribology",
-    title: "Interactive Tribology Science & Reibungsphysik",
-    description: "Ein hochgradig interaktives Tribologie-Labor. Passen Sie Belastung (Load), Gleitgeschwindigkeit und Betriebstemperatur live über Präzisionsregler an. Der Reibungskoeffizient und das Scherraten-Diagramm berechnen sich in Echtzeit nach physikalischen Strömungskonstanten.",
-    hotspots: ["Live-Reibungskoeffizient-Anzeige (COF)", "Viskositätsdiagramm im Fluidfilm", "Thermo-Mechanische Regler"],
-    tips: "Tipp: Ändern Sie die Viskosität des Öls von trocken zu nass und erhöhen Sie die Last, um Grenzreibungseffekte zu simulieren.",
+    title: "Interactive Tribology & Friction Physics",
+    description: "An immersive tribology laboratory. Adapt the applied normal load, sliding speed, and localized temperatures in real time using precision sliders. The friction coefficient (COF) and fluid shear curves update instantly according to hydrodynamic principles.",
+    hotspots: ["Real-time Friction Coefficient (COF)", "Fluid Film Viscosity Plot", "Thermo-Mechanical Controls"],
+    tips: "Tip: Swap your mineral formulas or fluid compounds and tweak the normal force to simulate extreme boundary lubrication limits.",
     badge: "03 / TRIBOLOGY SIM"
   },
   {
     tab: "simulator",
-    title: "Hydraulik-Entlüftungssimulator (Brake Bleed Lab)",
-    description: "Ein voll-interaktiver Ausbildungssimulator für Scheibenbremsen-Entlüftungen. Führen Sie die 6 mechanischen Schritte exakt durch: Montieren Sie den Entlüftungsblock, füllen Sie die Bremsflüssigkeit, evakuieren Sie Luftbläschen und prüfen Sie den System-Sattelpunkt (Bite Point).",
-    hotspots: ["6-Schritt Entlüftungspfad", "Echtzeit Druck- & Purity-Indikator", "Live-Druckpunkt-Deka-Squeeze"],
-    tips: "Tipp: Tippen Sie im Vakuumschritt mehrmals auf die Leitung, um festsitzende Gasbläschen physikalisch zu lösen!",
+    title: "Hydraulic Bleeding Simulator (Brake Bleed Lab)",
+    description: "A fully active training module for bicycle disc brake bleeding. Safely execute the 6 structural steps: mount the caliper bleed block, connect internal syringes, purge trapped air bubbles, and construct a rock-solid hydraulic bite point.",
+    hotspots: ["6-Step Purge Procedure", "Real-time Pressure & Purity Gauge", "Live Bite Point Squeeze-Test"],
+    tips: "Tip: During the vacuum phase, tap directly on the virtual lines to dislodge stubborn micro-bubble clusters!",
     badge: "04 / HYDRAULIC DUCT"
   },
   {
     tab: "setup",
-    title: "Präzisions-Drehmoment & Tuning-Fallstudien",
-    description: "Carbonstrukturen sind hochempfindlich gegenüber Klemmkräften. In dieser Sektion analysieren Sie reale Tuning-Fälle und lernen, wie viel Newtonmeter (Nm) Anzugsmoment nötig ist, um maximalen Halt ohne Materialkollaps zu garantieren.",
-    hotspots: ["Tuning-Einbau-Szenarien", "Symptomanalyse & exakte Reparaturlösungen", "Newtonmeter Drehmomentschlüssel-Kalibrierung"],
-    tips: "Tipp: Jeder Fall zeigt das exakt geprüfte Drehmomentspektrum zum Schutz ultraleichter Composite-Wände.",
+    title: "Fastener Torque & Tuning Case Studies",
+    description: "Carbon composites are highly susceptible to clamping fatigue. Inspect active field failures or performance tunings to calibrate exact Newton-meter (Nm) torque values, securing components without cracking ultra-thin walls.",
+    hotspots: ["Active Workshop Challenges", "Diagnostic Symptoms & Remedies", "Torque Wrench Calibration Panel"],
+    tips: "Tip: Each case defines precise clamping envelopes to keep components secure and composite weaves completely intact.",
     badge: "05 / CALIBRATION RAT"
   },
   {
     tab: "quiz",
-    title: "Technisches Audit & Offzielles Zertifikat",
-    description: "Haben Sie alles verstanden? Absolvieren Sie die zertifizierte Werkstattprüfung mit hochkomplexen Fachfragen zur Hydraulik, Grenzflächenreibung und Nm-Toleranzen. Bestrumpfen Sie die Mindestpunktzahl für ein fälschungssicheres Workshop-Zertifikat!",
-    hotspots: ["6-Fachfragen Multiple Choice", "Echtes System-Scoring", "Personalisiertes Zertifikationsdokument"],
-    tips: "Tipp: Tragen Sie nach Bestehen Ihren Namen ein, um den fälschungssicheren 'Secure Seal' auf Ihr PDF/Dokument aufzuprägen.",
+    title: "Technical Compliance Audit & Certification",
+    description: "Ready to test your knowledge? Attempt our comprehensive compliance assessment covering complex questions on hydraulic flow, boundary friction, and torque ranges to qualify for a validated course certificate.",
+    hotspots: ["6 Multiple Choice Audits", "Live Performance Rating", "Official Secure-Signed Certificate"],
+    tips: "Tip: Pass the exam and insert your professional name to imprint the secure digital integrity seal.",
     badge: "06 / AUDIT SECURE"
   }
 ];
@@ -138,12 +138,12 @@ export default function AppEinweisung({ activeTab, setActiveTab, isOpen, onClose
           
           <div className="flex items-center gap-3">
             <span className="text-[10px] font-mono text-titanium-400">
-              SCHRITT {currentStepIdx + 1} VON {TOUR_STEPS.length}
+              STEP {currentStepIdx + 1} OF {TOUR_STEPS.length}
             </span>
             <button 
               onClick={onClose}
               className="text-titanium-400 hover:text-white transition-colors cursor-pointer"
-              title="Tour beenden"
+              title="End Tour"
             >
               <X className="w-4 h-4" />
             </button>
@@ -172,7 +172,7 @@ export default function AppEinweisung({ activeTab, setActiveTab, isOpen, onClose
             {/* Active section landmarks */}
             <div className="space-y-2">
               <div className="text-[9px] font-mono text-titanium-400 uppercase tracking-wider font-extrabold">
-                Fokus-Bereiche in diesem Tab:
+                Focus Areas in this Tab:
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {currentStep.hotspots.map((h, i) => (
@@ -215,11 +215,11 @@ export default function AppEinweisung({ activeTab, setActiveTab, isOpen, onClose
             disabled={currentStepIdx === 0}
             className="py-2 px-3 text-[10px] font-mono border border-titanium-850 hover:border-titanium-700 hover:text-white transition-all text-titanium-400 flex items-center gap-1.5 disabled:opacity-35 disabled:cursor-not-allowed cursor-pointer"
           >
-            <ArrowLeft className="w-3.5 h-3.5" /> ZURÜCK
+            <ArrowLeft className="w-3.5 h-3.5" /> BACK
           </button>
 
           <span className="hidden sm:inline text-[9px] font-mono text-titanium-500">
-            Klicken Sie neben die Karte, um zu schließen
+            Click outside the card to close
           </span>
 
           <button
@@ -227,9 +227,9 @@ export default function AppEinweisung({ activeTab, setActiveTab, isOpen, onClose
             className="py-2 px-4 text-[10px] font-mono font-bold bg-fluid-gold text-titanium-950 hover:bg-fluid-gold/80 transition-all flex items-center gap-1.5 cursor-pointer"
           >
             {currentStepIdx === TOUR_STEPS.length - 1 ? (
-              <>TOUR BEENDEN <CheckCircle2 className="w-3.5 h-3.5" /></>
+              <>FINISH TOUR <CheckCircle2 className="w-3.5 h-3.5" /></>
             ) : (
-              <>NÄCHSTER TAB <ArrowRight className="w-3.5 h-3.5" /></>
+              <>NEXT TAB <ArrowRight className="w-3.5 h-3.5" /></>
             )}
           </button>
         </div>
