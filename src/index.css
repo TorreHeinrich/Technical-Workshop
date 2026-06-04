@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-titanium-50: #fbfbfb;
+  --color-titanium-100: #e5e7eb;
+  --color-titanium-200: #d1d5db;
+  --color-titanium-300: #9ca3af;
+  --color-titanium-400: #6b7280;
+  --color-titanium-500: #4b5563;
+  --color-titanium-600: #374151;
+  --color-titanium-700: #1f2937;
+  --color-titanium-800: #262626;
+  --color-titanium-850: #1f2937;
+  --color-titanium-900: #1a1a1a;
+  --color-titanium-950: #111111;
+  
+  --color-carbon-background: #111111;
+  --color-carbon-card: #1a1a1a;
+  --color-fluid-red: #ef4444; /* Shimano Mineral Oil */
+  --color-fluid-gold: #f97316; /* Geometric Balance orange-500 */
+  --color-anodized-blue: #3b82f6; /* Geometric Balance blue-500 */
+}
+
+@layer base {
+  body {
+    background-color: var(--color-titanium-950);
+    color: var(--color-titanium-100);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom Scrollbar for premium technical feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-titanium-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-titanium-800);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-fluid-gold);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+.glow-orange {
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.15);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.12);
+}

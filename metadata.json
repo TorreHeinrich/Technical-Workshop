@@ -1,0 +1,6 @@
+{
+  "name": "Technical Workshop Portfolio",
+  "description": "An interactive portfolio showcasing high-end sports bike mechanics, hydraulic brake bleeding simulations, tribological principles, and workshop knowledge quizzes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
