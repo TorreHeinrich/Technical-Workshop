@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from "react";
-import { User, Droplet, Wrench, Award, Sliders, Layers, ChevronRight, CheckCircle, Flame, ShieldAlert, BadgeInfo } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { User, Droplet, Wrench, Award, Sliders, Layers, ChevronRight, CheckCircle, Flame, ShieldAlert, BadgeInfo, HelpCircle } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import Introduction from "./components/Introduction";
 import KeyAreas from "./components/KeyAreas";
@@ -12,11 +12,22 @@ import Tribology from "./components/Tribology";
 import BleedSimulator from "./components/BleedSimulator";
 import ComponentSetup from "./components/ComponentSetup";
 import QuizSection from "./components/QuizSection";
+import AppEinweisung from "./components/AppEinweisung";
 
 type ActiveTab = "intro" | "areas" | "tribology" | "simulator" | "setup" | "quiz";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>("intro");
+  const [isTourOpen, setIsTourOpen] = useState(false);
+
+  // Auto-launch walkthrough if first-time user
+  useEffect(() => {
+    const hasSeenTour = localStorage.getItem("torre_workshop_tour_v1");
+    if (!hasSeenTour) {
+      setIsTourOpen(true);
+      localStorage.setItem("torre_workshop_tour_v1", "true");
+    }
+  }, []);
 
   const tabItems = [
     { id: "intro" as ActiveTab, label: "Overview", icon: <User className="w-4 h-4" /> },
@@ -59,7 +70,7 @@ export default function App() {
             </div>
             <div>
               <h1 className="text-2xl md:text-3xl font-display font-extrabold tracking-tighter text-white leading-none uppercase">
-                Technical Workshop : <span className="text-fluid-gold">AERO-SYSTEMS</span>
+                Technical Workshop : <span className="text-fluid-gold">by Torre Ehlers</span>
               </h1>
               <p className="text-[10px] font-mono tracking-widest text-titanium-300 mt-1 uppercase">
                 High-End Sports Bike Engineering & Tribological Analysis
@@ -67,10 +78,19 @@ export default function App() {
             </div>
           </div>
 
-          {/* Station ID Metric aligned with design spec */}
-          <div className="text-right font-mono self-end sm:self-center">
-            <div className="text-[9px] text-fluid-gold uppercase tracking-widest font-bold">Station ID</div>
-            <div className="text-xl font-bold text-white">WS-092.V4</div>
+          {/* Station ID / Tour Activation aligned with design spec */}
+          <div className="flex items-center gap-4 self-end sm:self-center">
+            <button
+              onClick={() => setIsTourOpen(true)}
+              className="flex items-center gap-1.5 py-1.5 px-3 border border-fluid-gold text-fluid-gold hover:bg-fluid-gold/10 font-mono text-[10px] tracking-wider font-extrabold uppercase transition-all cursor-pointer select-none"
+            >
+              <HelpCircle className="w-3.5 h-3.5" />
+              <span>Anleitung</span>
+            </button>
+            <div className="text-right font-mono">
+              <div className="text-[9px] text-fluid-gold uppercase tracking-widest font-bold text-class">Station ID</div>
+              <div className="text-xl font-bold text-white leading-none">WS-092.V4</div>
+            </div>
           </div>
 
         </div>
@@ -153,6 +173,14 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* Stateful Onboarding / App Walkthrough system */}
+      <AppEinweisung 
+        isOpen={isTourOpen} 
+        activeTab={activeTab} 
+        setActiveTab={setActiveTab} 
+        onClose={() => setIsTourOpen(false)} 
+      />
     </div>
   );
 }
